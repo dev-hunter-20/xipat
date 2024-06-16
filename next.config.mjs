@@ -5,16 +5,20 @@ const nextConfig = {
   reactStrictMode: true,
   webpack(config, { isServer }) {
     if (!isServer) {
-      config.optimization.minimize = true;
-      config.optimization.minimizer = [
-        new TerserPlugin({
-          terserOptions: {
-            compress: {
-              drop_console: true,
+      config.optimization = {
+        ...config.optimization,
+        minimize: true,
+        minimizer: [
+          new TerserPlugin({
+            terserOptions: {
+              compress: {
+                drop_console: true,
+              },
             },
-          },
-        }),
-      ];
+          }),
+        ],
+        usedExports: true,
+      };
       config.module.rules.push(
         {
           test: /\.css$/,
