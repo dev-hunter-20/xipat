@@ -1,8 +1,11 @@
 import NavbarPage from '@/layouts/main/NavbarPage';
-import DetailAppPage from './_components/detail-app/DetailAppPage';
+// import DetailAppPage from './_components/detail-app/DetailAppPage';
 import DetailAppApiService from '@/api-services/api/DetaiAppApiService';
 import { AppDetail } from '@/seo/AppDetail';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
+
+const DetailAppPage = () => dynamic('./_components/detail-app/DetailAppPage');
 
 export const generateMetadata = async ({ params }) => {
   const currentYear = new Date().getFullYear();
