@@ -1,0 +1,10 @@
+.popup-change-log {
+  .ant-modal-body {
+    max-height: 500px;
+    overflow: auto;
+  }
+}
+.content-popup-change-log {
+  max-height: 500px !important;
+  overflow: auto !important;
+}

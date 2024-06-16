@@ -1,0 +1,17 @@
+.wrapper-detail-review {
+  margin-top: 100px;
+  .check-log-review-dashboard {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+}
+.loading_components {
+  display: flex;
+  justify-content: center;
+  height: 694px;
+  position: relative;
+  .ant-spin-spinning {
+    position: absolute;
+    top: 50%;
+  }
+}

@@ -1,0 +1,16 @@
+.container-content {
+  .breadcrumb-header {
+    padding: 10px 0;
+    background: #0b1d46;
+    font-size: 18px;
+    .ant-breadcrumb-separator {
+      color: #ffffff;
+    }
+    .ant-breadcrumb-link{
+      color: #ffffff;
+    }
+    a{
+      color: #ffffff;
+    }
+  }
+}
