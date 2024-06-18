@@ -3,11 +3,9 @@ import AppProvider from './AppProvider';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import QueryProvider from './QueryProvider';
 import { landingPage } from '@/seo/LandingPage';
-import dynamic from 'next/dynamic';
 import ServiceWorker from './sw';
-
-const CrispChat = dynamic(() => import('./CrispChat'), { ssr: false });
-const GoogleAnalytics = dynamic(() => import('./GoogleAnalytics'), { ssr: false });
+import CrispChat from './CrispChat';
+import GoogleAnalytics from './GoogleAnalytics';
 
 const { canonical } = landingPage;
 

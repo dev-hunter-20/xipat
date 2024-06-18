@@ -1,8 +1,8 @@
 'use client';
 import { Layout, Menu } from 'antd';
 import React, { useCallback, useEffect, useState } from 'react';
-import HeaderComponent from '../header/HeaderComponent';
-import HeaderMobile from '../header/header-mobile/HeaderMobile';
+// import HeaderComponent from '../header/HeaderComponent';
+// import HeaderMobile from '../header/header-mobile/HeaderMobile';
 import { useRouter } from 'next/navigation';
 import {
   AppstoreOutlined,
@@ -12,12 +12,18 @@ import {
   ShoppingCartOutlined,
 } from '@ant-design/icons';
 import Link from 'next/link';
-import Auth from '@/utils/store/Authentication';
-import Container from '../container/Container';
-import FooterSasi from '../footer/FooterSasi';
+// import Auth from '@/utils/store/Authentication';
+// import Container from '../container/Container';
+// import FooterSasi from '../footer/FooterSasi';
 import './NavbarPage.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMyAppsAction } from '@/redux/actions';
+
+const HeaderComponent = dynamic(() => import('../header/HeaderComponent'));
+const HeaderMobile = dynamic(() => import('../header/header-mobile/HeaderMobile'));
+const Container = dynamic(() => import('../container/Container'));
+const FooterSasi = dynamic(() => import('../footer/FooterSasi'));
+const Auth = dynamic(() => import('@/utils/store/Authentication'));
 
 const NavbarPage = ({ children }) => {
   const router = useRouter();

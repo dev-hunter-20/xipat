@@ -39,4 +39,10 @@ export default class AuthApiService {
     const response = await CommonCall(`${URL_SUB_API}/registry`, header);
     return response;
   }
+  static async loginGoogle(state, code) {
+    const response = await CommonCall(
+      `${URL_API}google_login_callback?redirect_url=${DOMAIN}google_login_callback&state=${state}&code=${code}`,
+    );
+    return response;
+  }
 }
